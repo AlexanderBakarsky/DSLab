@@ -1,0 +1,11 @@
+base: args/parameters.yaml
+runs:
+  - name: avg-16_centered_with_cl_weight_0.25
+    overrides:
+      training_output_subdir: "kk-en/avg-16_centered_with_cl_weight_0.25"
+      use_cl: true
+      pooler_type: "last-16"
+      cl_center_mode: "joint"
+      cl_center_momentum: 0.9
+      cl_weight: 0.25
+

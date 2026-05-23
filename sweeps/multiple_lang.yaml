@@ -1,0 +1,13 @@
+base: args/multiple_pairs_base.yaml
+runs:
+  - name: multiple_pairs_clm
+    overrides:
+      use_chrF: true
+      cl_hard_negatives: false
+      eval_model: "/work/courses/dslab/team4/multiple_pairs/apertus/clm"
+
+  - name: multiple_pairs_cl
+    overrides:
+      use_chrF: true
+      cl_hard_negatives: false
+      eval_model: "/work/courses/dslab/team4/multiple_pairs/apertus/cl"

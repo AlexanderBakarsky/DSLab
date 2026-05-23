@@ -1,0 +1,11 @@
+
+
+README.md
+wandb/
+__pycache__/
+logs/
+Old/
+plots/
+
+*.log
+CLAUDE.md

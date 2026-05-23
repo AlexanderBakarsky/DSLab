@@ -1,0 +1,143 @@
+base: args/base_parameters.yaml
+runs:
+  - name: single_lang_yo-en_base
+    overrides:
+      source_lang: "yo"
+      target_lang: "en"
+      do_train: false
+  - name: single_lang_en-yo_base
+    overrides:
+      source_lang: "en"
+      target_lang: "yo"
+      do_train: false
+      
+  - name: single_lang_yo-en_clm
+    overrides:
+      do_train: true
+      use_cl: false
+      cl_hard_negatives: false
+      source_lang: "yo"
+      target_lang: "en"
+      training_output_subdir: "single_pairs/apertus/yo-en/clm"
+
+  - name: single_lang_en-yo_clm
+    overrides:
+      do_train: true
+      use_cl: false
+      cl_hard_negatives: false
+      source_lang: "en"
+      target_lang: "yo"
+      training_output_subdir: "single_pairs/apertus/en-yo/clm"
+
+  - name: single_lang_yo-en_cl
+    overrides:
+      do_train: true
+      use_cl: true
+      cl_hard_negatives: false
+      source_lang: "yo"
+      target_lang: "en"
+      training_output_subdir: "single_pairs/apertus/yo-en/cl"
+
+  - name: single_lang_en-yo_cl
+    overrides:
+      do_train: true
+      use_cl: true
+      cl_hard_negatives: false
+      source_lang: "en"
+      target_lang: "yo"
+      training_output_subdir: "single_pairs/apertus/en-yo/cl"
+
+  - name: single_lang_ha-en_base
+    overrides:
+      source_lang: "ha"
+      target_lang: "en"
+      do_train: false
+  - name: single_lang_en-ha_base
+    overrides:
+      source_lang: "en"
+      target_lang: "ha"
+      do_train: false
+      
+  - name: single_lang_ha-en_clm
+    overrides:
+      do_train: true
+      use_cl: false
+      cl_hard_negatives: false
+      source_lang: "ha"
+      target_lang: "en"
+      training_output_subdir: "single_pairs/apertus/ha-en/clm"
+
+  - name: single_lang_en-ha_clm
+    overrides:
+      do_train: true
+      use_cl: false
+      cl_hard_negatives: false
+      source_lang: "en"
+      target_lang: "ha"
+      training_output_subdir: "single_pairs/apertus/en-ha/clm"
+
+  - name: single_lang_ha-en_cl
+    overrides:
+      do_train: true
+      use_cl: true
+      cl_hard_negatives: false
+      source_lang: "ha"
+      target_lang: "en"
+      training_output_subdir: "single_pairs/apertus/ha-en/cl"
+
+  - name: single_lang_en-ha_cl
+    overrides:
+      do_train: true
+      use_cl: true
+      cl_hard_negatives: false
+      source_lang: "en"
+      target_lang: "ha"
+      training_output_subdir: "single_pairs/apertus/en-ha/cl"
+
+  - name: single_lang_kk-en_base
+    overrides:
+      source_lang: "kk"
+      target_lang: "en"
+      do_train: false
+  - name: single_lang_en-kk_base
+    overrides:
+      source_lang: "en"
+      target_lang: "kk"
+      do_train: false
+      
+  - name: single_lang_kk-en_clm
+    overrides:
+      do_train: true
+      use_cl: false
+      cl_hard_negatives: false
+      source_lang: "kk"
+      target_lang: "en"
+      training_output_subdir: "single_pairs/apertus/kk-en/clm"
+
+  - name: single_lang_en-kk_clm
+    overrides:
+      do_train: true
+      use_cl: false
+      cl_hard_negatives: false
+      source_lang: "en"
+      target_lang: "kk"
+      training_output_subdir: "single_pairs/apertus/en-kk/clm"
+
+  - name: single_lang_kk-en_cl
+    overrides:
+      do_train: true
+      use_cl: true
+      cl_hard_negatives: false
+      source_lang: "kk"
+      target_lang: "en"
+      training_output_subdir: "single_pairs/apertus/kk-en/cl"
+
+  - name: single_lang_en-kk_cl
+    overrides:
+      do_train: true
+      use_cl: true
+      cl_hard_negatives: false
+      source_lang: "en"
+      target_lang: "kk"
+      training_output_subdir: "single_pairs/apertus/en-kk/cl"
+  

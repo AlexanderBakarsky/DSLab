@@ -1,0 +1,29 @@
+base: args/base_alignment_uniformity.yaml
+runs:
+  # - name: alignment_uniformity_en-kk_base
+  #   overrides:
+  #     eval_model: "swiss-ai/Apertus-8B-2509"
+
+  # - name: alignment_uniformity_en-kk_clm
+  #   overrides:
+  #     eval_model: "/work/courses/dslab/team4/multiple_pairs/apertus/en-kk/clm"
+
+  # - name: alignment_uniformity_en-kk_cl
+  #   overrides:
+  #     eval_model: "/work/courses/dslab/team4/multiple_pairs/apertus/en-kk/cl"
+
+  - name: alignment_uniformity_kk-en_cl
+    overrides:
+      do_plot: true
+      eval_model: "/work/courses/dslab/team4/multiple_pairs/apertus/cl"
+      investigation_languages: ["kk", "ha", "yo"]
+
+  # - name: alignment_uniformity_kk-en_clm
+  #   overrides:
+  #     eval_model: "/work/courses/dslab/team4/multiple_pairs/apertus/kk-en/clm"
+
+  # - name: alignment_multiple_lang_base
+  #   overrides:
+  #     eval_model: "swiss-ai/Apertus-8B-2509"
+  #     do_plot: true
+  #     investigation_languages: ["kk", "ha", "yo"]    

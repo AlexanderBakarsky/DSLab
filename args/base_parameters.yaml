@@ -1,0 +1,77 @@
+#model:
+run_name: "apertus"
+
+source_lang: "yo"
+target_lang: "en"
+model_name: "swiss-ai/Apertus-8B-2509"
+cache_dir: "your/cache/dir"
+use_instruct: false
+training_output_dir: "your/outp/dir"
+training_output_subdir: "your/training/subdir"
+seed: 0
+max_context_len: 600
+max_generation_context_len: 200
+
+save_best_checkpoint: true
+
+#training:
+
+do_train: true
+train_dataset: "nllb-laser"
+train_split: "train"
+size_training_data: 10000
+
+#training - evaluation:
+train_val_dataset: "flores200"
+train_val_split: "devtest"
+size_eval_data: 64
+use_BLEU: true
+use_chrF: false
+train_eval_num_examples: 3
+eval_steps: 8
+
+#training - CL:
+use_cl: true
+pooler_type: "avg-1"
+cl_weight: 1.0
+clm_weight: 1.5
+cl_temperature: 0.05
+cl_hard_negatives: false
+cl_center_mode: "off" #off, "joint", "per_side"
+
+#training - sequence packing:
+pack_clm: false
+clm_block_size:
+
+#training - Parameters:
+lr: 3e-4 #1e-5
+epochs: 1
+batch_size: 128
+clm_micro_bs: 16
+cl_micro_bs: 8
+max_grad_norm: 1.0
+num_workers: 0
+weight_decay: 0.0
+warmup_fraction: 0.03
+
+mix_prompt_formats: true
+
+overwrite_output_dir: false
+
+#LoRA:
+use_lora: true
+lora_rank: 64
+lora_dropout: 0.05
+
+
+#evaluation:
+do_evaluate: true
+eval_model: #"swiss-ai/Apertus-8B-2509" #facebook/xglm-564M # if None, will use training_output_dir
+dataset: "flores200"
+split: "devtest"
+icl_dataset: "flores200"
+icl_split: "dev"
+eval_output_dir: "./evals"
+eval_batch_size: 32
+max_size:
+num_examples: 3
